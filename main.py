@@ -41,7 +41,7 @@ def load_generator(path="generator_epoch_50.pth", device="cpu"):
 
 # Image generation
 def generate_images(generator, digit, n_samples=5, noise_dim=100, device="cpu"):
-    z = torch.randn(n_samples, noise_dim).to(device)
+    z = torch.randn(n_samples, noise_dim).to(device) * 0.3
     labels = torch.full((n_samples,), digit, dtype=torch.long).to(device)
     with torch.no_grad():
         imgs = generator(z, labels)
