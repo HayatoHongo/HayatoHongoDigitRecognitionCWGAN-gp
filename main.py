@@ -49,7 +49,7 @@ def generate_images(generator, digit, n_samples=5, noise_dim=100, device="cpu"):
 
 # Streamlit UI
 st.title("Handwritten Digit Image Generator")
-st.markdown("Generate synthetic MNIST-like images using your trained Conditional WGAN-GP model.")
+st.markdown("Generate synthetic MNIST-like images using your trained model.")
 
 digit = st.selectbox("Choose a digit to generate (0–9):", list(range(10)))
 if st.button("Generate Images"):
