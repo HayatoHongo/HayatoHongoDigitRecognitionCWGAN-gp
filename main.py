@@ -33,7 +33,7 @@ class Generator(nn.Module):
 
 # Load trained generator
 @st.cache_resource
-def load_generator(path="generator_epoch_18.pth", device="cpu"):
+def load_generator(path="generator_epoch_50.pth", device="cpu"):
     model = Generator().to(device)
     model.load_state_dict(torch.load(path, map_location=device))
     model.eval()
